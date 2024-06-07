@@ -26,7 +26,7 @@ class Kontak extends React.Component {
 
   render() {
     return (
-      <div className="min-h-screen py-10">
+      <div className="min-h-screen py-10" id="kontak">
         <div className="container mx-auto px-4">
           <div className="flex space-x-4 mt-10">
             {/* Column 1: Slider */}
@@ -38,7 +38,7 @@ class Kontak extends React.Component {
                       <div className="flex flex-col items-center space-y-4 pt-20">
                         <img
                           className="w-24 h-24 rounded-full"
-                          src="https://via.placeholder.com/800x400"
+                          src="/foto/1.png"
                           alt="avatar"
                         />
                         <div className="text-center">
@@ -55,7 +55,7 @@ class Kontak extends React.Component {
                       <div className="flex flex-col items-center space-y-4 pt-20">
                         <img
                           className="w-24 h-24 rounded-full"
-                          src="https://via.placeholder.com/800x400"
+                          src="https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg"
                           alt="avatar"
                         />
                         <div className="text-center">
@@ -72,7 +72,7 @@ class Kontak extends React.Component {
                       <div className="flex flex-col items-center space-y-4 pt-20">
                         <img
                           className="w-24 h-24 rounded-full"
-                          src="https://via.placeholder.com/800x400"
+                          src="https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg"
                           alt="avatar"
                         />
                         <div className="text-center">

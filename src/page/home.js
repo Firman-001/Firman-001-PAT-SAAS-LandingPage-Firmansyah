@@ -1,60 +1,60 @@
 import React from "react";
 
 class Card extends React.Component {
-    render() {
-      return (
-        <card className="card mx-6rem">
-         <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
-      {/* Column 1 */}
-      <div className="bg-gray-300 text-black rounded-lg p-6 mt-6">
-  <h2 className="text-2xl font-semibold mb-4">Ruang Kelas</h2>
-  <img
-    src="./foto/.jfif"
-    alt=""
-    className="w-full h-auto mb-4 rounded-lg"
-  />
-  <p className="text-lg text-justify">
-    Ini adalah teks paragraf untuk kolom pertama. Anda dapat menambahkan lebih banyak konten di sini.
-  </p>
-</div>
+  render() {
+    return (
+      <card className="card mx-6rem" id="profile">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+            {/* Column 1 */}
+            <div className="bg-gray-300 text-black rounded-lg p-6 mt-6">
+              <h2 className="text-2xl font-semibold mb-4">Ruang Kelas</h2>
+              <img
+                src="https://smktibazma.sch.id/static/media/r_kelas.b550b814ba15f4fff81a.jpg"
+                alt=""
+                className="w-full h-auto mb-4 rounded-lg"
+              />
+              <p className="text-lg text-justify">
+                Ini adalah teks paragraf untuk kolom pertama. Anda dapat menambahkan lebih banyak konten di sini.
+              </p>
+            </div>
 
-      {/* Column 2 */}
-      <div className="bg-gray-300 text-black rounded-lg p-6 mt-6">
-        <h2 className="text-2xl font-semibold mb-4">Masjid dan Aula</h2>
-        <img
-          src="https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg"
-          alt="Placeholder"
-          className="w-full h-auto mb-4"
-        />
-        <p className="text-lg text-justify">
-          Ini adalah teks paragraf untuk kolom kedua. Anda dapat menambahkan lebih banyak konten di sini.
-        </p>
-      </div>
+            {/* Column 2 */}
+            <div className="bg-gray-300 text-black rounded-lg p-6 mt-6">
+              <h2 className="text-2xl font-semibold mb-4">Masjid dan Aula</h2>
+              <img
+                src="https://smktibazma.sch.id/static/media/masjid.d157934d98cee11f144c.jpg"
+                alt="Placeholder"
+                className="w-full h-auto mb-4"
+              />
+              <p className="text-lg text-justify">
+                Ini adalah teks paragraf untuk kolom kedua. Anda dapat menambahkan lebih banyak konten di sini.
+              </p>
+            </div>
 
-      {/* Column 3 */}
-      <div className="bg-gray-300 text-black rounded-lg p-6 mt-6">
-        <h2 className="text-2xl font-semibold mb-4">Gedung Asrama</h2>
-        <img
-          src="https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg"
-          alt="Placeholder"
-          className="w-full h-auto mb-4"
-        />
-        <p className="text-lg text-justify">
-          Ini adalah teks paragraf untuk kolom ketiga. Anda dapat menambahkan lebih banyak konten di sini.
-        </p>
-      </div>
-    </div>
-  </div>
-        </card>
-      );
-    }
+            {/* Column 3 */}
+            <div className="bg-gray-300 text-black rounded-lg p-6 mt-6">
+              <h2 className="text-2xl font-semibold mb-4">Gedung Asrama</h2>
+              <img
+                src="https://smktibazma.sch.id/static/media/asrama.d1fa6eec69bfc5732828.jpg"
+                alt="Placeholder"
+                className="w-full h-auto mb-4"
+              />
+              <p className="text-lg text-justify">
+                Ini adalah teks paragraf untuk kolom ketiga. Anda dapat menambahkan lebih banyak konten di sini.
+              </p>
+            </div>
+          </div>
+        </div>
+      </card>
+    );
+  }
 }
 
 class Home extends React.Component {
   render() {
     return (
-      <div className="min-h-screen py-10" id="A">
+      <div className="min-h-screen py-10" id="home">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-black rounded-lg p-6 mt-6">
@@ -82,7 +82,7 @@ class Home extends React.Component {
               </button>
             </div>
             <div className="bg-gray-800 text-white rounded-lg p-6 mt-10">
-            <iframe
+              <iframe
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/VIDEO_ID"
