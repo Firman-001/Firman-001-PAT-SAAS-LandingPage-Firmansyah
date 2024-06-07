@@ -1,65 +1,108 @@
 import React from "react";
 
 class Kontak extends React.Component {
+  state = {
+    slideIndex: 0,
+  };
+
+  showSlide = (index) => {
+    const slides = document.querySelectorAll(".slider-card");
+    if (index >= slides.length) {
+      index = 0;
+    }
+    if (index < 0) {
+      index = slides.length - 1;
+    }
+    slides.forEach((slide) => {
+      slide.style.display = "none";
+    });
+    slides[index].style.display = "flex";
+    this.setState({ slideIndex: index });
+  };
+
+  componentDidMount() {
+    this.showSlide(this.state.slideIndex);
+  }
+
   render() {
     return (
       <div className="min-h-screen py-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Column 1 */}
-            <div className="text-black rounded-lg p-6 mt-6 relative">
-              <h2 className="text-8xl font-semibold mb-4">SMK TI BAZMA </h2>
-              <h2 className="text-5xl font-semibold mb-4">
-                Islamic Boarding School
-              </h2>
-              <div className="avatar-carousel">
-                <div className="avatar-container">
-                  <img
-                    className="w-24 h-24 rounded-full mx-auto"
-                    src="https://via.placeholder.com/800x400"
-                    alt="avatar"
-                  />
-                  <div className="text-center mt-2">
-                    <h3 className="text-lg font-semibold">Avatar 1</h3>
-                    <p className="text-lg mt-4">
-                      Ini adalah teks paragraf untuk kolom pertama. Anda dapat
-                      menambahkan lebih banyak konten di sini.
-                    </p>
+          <div className="flex space-x-4 mt-10">
+            {/* Column 1: Slider */}
+            <div className="bg-gray-300 text-black rounded-lg p-6">
+              <div className="relative">
+                <div className="flex overflow-x-auto">
+                  <div className="flex-none w-64 p-4 slider-card">
+                    <div id="card1" className="flex flex-col items-center bg-gray-300 mt-10">
+                      <div className="flex flex-col items-center space-y-4 pt-20">
+                        <img
+                          className="w-24 h-24 rounded-full"
+                          src="https://via.placeholder.com/800x400"
+                          alt="avatar"
+                        />
+                        <div className="text-center">
+                          <h3 className="text-lg font-semibold">Avatar 1</h3>
+                          <p className="text-lg mt-4">
+                            Ini adalah teks paragraf untuk kolom pertama. Anda dapat menambahkan lebih banyak konten di sini.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-none w-64 p-4 slider-card">
+                    <div id="card2" className="flex flex-col items-center bg-gray-300 mt-10">
+                      <div className="flex flex-col items-center space-y-4 pt-20">
+                        <img
+                          className="w-24 h-24 rounded-full"
+                          src="https://via.placeholder.com/800x400"
+                          alt="avatar"
+                        />
+                        <div className="text-center">
+                          <h3 className="text-lg font-semibold">Avatar 2</h3>
+                          <p className="text-lg mt-4">
+                            Ini adalah teks paragraf untuk kolom kedua. Anda dapat menambahkan lebih banyak konten di sini.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-none w-64 p-4 slider-card">
+                    <div id="card3" className="flex flex-col items-center bg-gray-300 mt-10">
+                      <div className="flex flex-col items-center space-y-4 pt-20">
+                        <img
+                          className="w-24 h-24 rounded-full"
+                          src="https://via.placeholder.com/800x400"
+                          alt="avatar"
+                        />
+                        <div className="text-center">
+                          <h3 className="text-lg font-semibold">Avatar 3</h3>
+                          <p className="text-lg mt-4">
+                            Ini adalah teks paragraf untuk kolom ketiga. Anda dapat menambahkan lebih banyak konten di sini.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="avatar-container hidden">
-                  <img
-                    className="w-24 h-24 rounded-full mx-auto"
-                    src="https://via.placeholder.com/800x400"
-                    alt="avatar"
-                  />
-                  <div className="text-center mt-2">
-                    <h3 className="text-lg font-semibold">Avatar 2</h3>
-                    <p className="text-sm">Deskripsi avatar 2</p>  <p className="text-lg mt-4">
-                      Ini adalah teks paragraf untuk kolom pertama. Anda dapat
-                      menambahkan lebih banyak konten di sini.
-                    </p>
-                  </div>
-                </div>
-                <div className="avatar-container hidden">
-                  <img
-                    className="w-24 h-24 rounded-full mx-auto"
-                    src="https://via.placeholder.com/800x400"
-                    alt="avatar"    
-                  />
-                  <div className="text-center mt-2">
-                    <h3 className="text-lg font-semibold">Avatar 3</h3>
-                    <p className="text-lg mt-4">
-                      Ini adalah teks paragraf untuk kolom pertama. Anda dapat
-                      menambahkan lebih banyak konten di sini.
-                    </p>
-                  </div>
-                </div>
+                <button
+                  id="prevButton"
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2"
+                  onClick={() => this.showSlide(this.state.slideIndex - 1)}
+                >
+                  &#10094;
+                </button>
+                <button
+                  id="nextButton"
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2"
+                  onClick={() => this.showSlide(this.state.slideIndex + 1)}
+                >
+                  &#10095;
+                </button>
               </div>
             </div>
-
-            {/* Column 2 */}
-            <div className="bg-gray-100 text-black rounded-lg p-6 mt-6">
+            {/* Column 2: Form */}
+            <div className="bg-gray-300 text-black rounded-lg p-6 w-full">
               <h2 className="text-2xl font-semibold mb-4">Form Input</h2>
               <div>
                 <label className="block mb-2">Email</label>

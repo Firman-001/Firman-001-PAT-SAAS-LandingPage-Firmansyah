@@ -4,7 +4,7 @@ class Header extends React.Component {
   render() {
     return (
   
-      <nav className="bg-gray-400 shadow-lg ">
+      <nav className="bg-gray-300 shadow-lg ">
         
         <div className="max-w-7xl mx-auto px-4 ">
           <div className="flex justify-between items-center h-16 ">
@@ -17,34 +17,28 @@ class Header extends React.Component {
             </div>
             <div className="hidden sm:flex sm:space-x-8">
               <a
-                href="#Home"
+                href="About"
                 className="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Home
+                About
               </a>
               <a
-                href="#profil-sekolah"
+                href="#profile"
                 className="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Profil Sekolah
               </a>
               <a
-                href="#Kemitraan"
-                className="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Kemitraan
-              </a>
-              <a
                 href="#Donasi"
                 className="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Donasi
+               princing
               </a>
               <a
                 href="#PPDB"
                 className="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                PPDB
+                Kontak
               </a>
             </div>
           </div>

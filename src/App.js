@@ -3,7 +3,8 @@ import 'flowbite/dist/flowbite.css';
 import Header from './header/header';
 import Home from './page/home';
 import Kontak from './page/kontak/kontak ';
-import Footer  from './footer/footer';
+import './index.css';
+import Footer from './footer/footer';
 
 
 
@@ -13,7 +14,7 @@ function App() {
     <Header/> 
     <Home/>
     <Kontak/>
-
+    <Footer />
     </div>
   );
 }
